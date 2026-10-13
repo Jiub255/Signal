@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://h3lrxr8kcbim"]
+
+[ext_resource type="Texture2D" uid="uid://c2gmiph2kp4t2" path="res://icon.svg" id="1_fj7yv"]
+[ext_resource type="Script" uid="uid://bj10is4fuv3ro" path="res://car.gd" id="2_tlwt5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7oc0d"]
+
+[node name="World" type="Node2D" unique_id=568340604]
+
+[node name="Background" type="Sprite2D" parent="." unique_id=1035652302]
+self_modulate = Color(0.08468992, 0.08468992, 0.08468992, 1)
+scale = Vector2(5, 2.8124998)
+texture = ExtResource("1_fj7yv")
+centered = false
+
+[node name="E_W Road" type="Sprite2D" parent="Background" unique_id=336675672]
+self_modulate = Color(0.70380783, 0.70380783, 0.70380783, 1)
+position = Vector2(0, 59)
+scale = Vector2(1, 0.1)
+texture = ExtResource("1_fj7yv")
+centered = false
+
+[node name="N_S Road" type="Sprite2D" parent="Background" unique_id=1420337945]
+self_modulate = Color(0.70380783, 0.70380783, 0.70380783, 1)
+position = Vector2(60.8, 0)
+scale = Vector2(0.05, 1)
+texture = ExtResource("1_fj7yv")
+centered = false
+
+[node name="Car" type="CharacterBody2D" parent="." unique_id=1646803844]
+position = Vector2(12, 185)
+script = ExtResource("2_tlwt5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Car" unique_id=1996994173]
+shape = SubResource("RectangleShape2D_7oc0d")
+
+[node name="Sprite2D" type="Sprite2D" parent="Car" unique_id=1215567777]
+self_modulate = Color(0.85038173, 0.12133936, 2.8878452e-07, 1)
+scale = Vector2(0.155, 0.155)
+texture = ExtResource("1_fj7yv")
