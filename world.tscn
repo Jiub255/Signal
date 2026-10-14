@@ -2,8 +2,12 @@
 
 [ext_resource type="Texture2D" uid="uid://c2gmiph2kp4t2" path="res://icon.svg" id="1_fj7yv"]
 [ext_resource type="Script" uid="uid://bj10is4fuv3ro" path="res://car.gd" id="2_tlwt5"]
+[ext_resource type="Script" uid="uid://db5xcrwr11i7g" path="res://traffic_light.gd" id="3_tlwt5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7oc0d"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y0r1h"]
+size = Vector2(128, 128)
 
 [node name="World" type="Node2D" unique_id=568340604]
 
@@ -38,3 +42,17 @@ shape = SubResource("RectangleShape2D_7oc0d")
 self_modulate = Color(0.85038173, 0.12133936, 2.8878452e-07, 1)
 scale = Vector2(0.155, 0.155)
 texture = ExtResource("1_fj7yv")
+
+[node name="Traffic Light E_W" type="Node2D" parent="." unique_id=1901112112]
+position = Vector2(320, 184)
+script = ExtResource("3_tlwt5")
+
+[node name="Sprite2D" type="Sprite2D" parent="Traffic Light E_W" unique_id=863510790]
+modulate = Color(0, 0.53333336, 0.2, 0.48235294)
+texture = ExtResource("1_fj7yv")
+
+[node name="Area2D" type="Area2D" parent="Traffic Light E_W" unique_id=1609243866]
+unique_name_in_owner = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Traffic Light E_W/Area2D" unique_id=180811527]
+shape = SubResource("RectangleShape2D_y0r1h")
