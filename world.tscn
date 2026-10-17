@@ -1,58 +1,263 @@
 [gd_scene format=3 uid="uid://h3lrxr8kcbim"]
 
-[ext_resource type="Texture2D" uid="uid://c2gmiph2kp4t2" path="res://icon.svg" id="1_fj7yv"]
+[ext_resource type="Texture2D" uid="uid://uuwv03ab6e56" path="res://assets/art/blank_640x360.png" id="1_dwbse"]
+[ext_resource type="Texture2D" uid="uid://damlxm1rb4htm" path="res://assets/art/roads2W.png" id="2_036b0"]
 [ext_resource type="Script" uid="uid://bj10is4fuv3ro" path="res://car.gd" id="2_tlwt5"]
 [ext_resource type="Script" uid="uid://db5xcrwr11i7g" path="res://traffic_light.gd" id="3_tlwt5"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_7oc0d"]
+[ext_resource type="Texture2D" uid="uid://bo2cklawndfm8" path="res://assets/art/only_cars.png" id="4_dwbse"]
+[ext_resource type="Texture2D" uid="uid://dp8c2ml1pyy4n" path="res://assets/art/circle_21x21.png" id="6_dwbse"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y0r1h"]
-size = Vector2(128, 128)
+size = Vector2(200, 200)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7oc0d"]
+size = Vector2(20, 8)
 
 [node name="World" type="Node2D" unique_id=568340604]
 
 [node name="Background" type="Sprite2D" parent="." unique_id=1035652302]
 self_modulate = Color(0.08468992, 0.08468992, 0.08468992, 1)
-scale = Vector2(5, 2.8124998)
-texture = ExtResource("1_fj7yv")
+texture = ExtResource("1_dwbse")
 centered = false
 
-[node name="E_W Road" type="Sprite2D" parent="Background" unique_id=336675672]
-self_modulate = Color(0.70380783, 0.70380783, 0.70380783, 1)
-position = Vector2(0, 59)
-scale = Vector2(1, 0.1)
-texture = ExtResource("1_fj7yv")
+[node name="E_W" type="Node2D" parent="Background" unique_id=1494821939]
+
+[node name="Sprite2D" type="Sprite2D" parent="Background/E_W" unique_id=2072153800]
+position = Vector2(32, 168)
+texture = ExtResource("2_036b0")
 centered = false
+hframes = 8
+vframes = 3
+frame = 2
 
-[node name="N_S Road" type="Sprite2D" parent="Background" unique_id=1420337945]
-self_modulate = Color(0.70380783, 0.70380783, 0.70380783, 1)
-position = Vector2(60.8, 0)
-scale = Vector2(0.05, 1)
-texture = ExtResource("1_fj7yv")
+[node name="Sprite2D11" type="Sprite2D" parent="Background/E_W" unique_id=1011781634]
+position = Vector2(-32, 168)
+texture = ExtResource("2_036b0")
 centered = false
+hframes = 8
+vframes = 3
+frame = 2
 
-[node name="Car" type="CharacterBody2D" parent="." unique_id=1646803844]
-position = Vector2(12, 185)
-script = ExtResource("2_tlwt5")
+[node name="Sprite2D2" type="Sprite2D" parent="Background/E_W" unique_id=1019929386]
+position = Vector2(96, 168)
+texture = ExtResource("2_036b0")
+centered = false
+hframes = 8
+vframes = 3
+frame = 2
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Car" unique_id=1996994173]
-shape = SubResource("RectangleShape2D_7oc0d")
+[node name="Sprite2D3" type="Sprite2D" parent="Background/E_W" unique_id=1596855177]
+position = Vector2(160, 168)
+texture = ExtResource("2_036b0")
+centered = false
+hframes = 8
+vframes = 3
+frame = 2
 
-[node name="Sprite2D" type="Sprite2D" parent="Car" unique_id=1215567777]
-self_modulate = Color(0.85038173, 0.12133936, 2.8878452e-07, 1)
-scale = Vector2(0.155, 0.155)
-texture = ExtResource("1_fj7yv")
+[node name="Sprite2D4" type="Sprite2D" parent="Background/E_W" unique_id=1791376894]
+position = Vector2(224, 168)
+texture = ExtResource("2_036b0")
+centered = false
+hframes = 8
+vframes = 3
+frame = 2
+
+[node name="Sprite2D6" type="Sprite2D" parent="Background/E_W" unique_id=2075514980]
+position = Vector2(352, 168)
+texture = ExtResource("2_036b0")
+centered = false
+hframes = 8
+vframes = 3
+frame = 2
+
+[node name="Sprite2D7" type="Sprite2D" parent="Background/E_W" unique_id=1841758279]
+position = Vector2(416, 168)
+texture = ExtResource("2_036b0")
+centered = false
+hframes = 8
+vframes = 3
+frame = 2
+
+[node name="Sprite2D8" type="Sprite2D" parent="Background/E_W" unique_id=139004046]
+position = Vector2(480, 168)
+texture = ExtResource("2_036b0")
+centered = false
+hframes = 8
+vframes = 3
+frame = 2
+
+[node name="Sprite2D9" type="Sprite2D" parent="Background/E_W" unique_id=2087752718]
+position = Vector2(544, 168)
+texture = ExtResource("2_036b0")
+centered = false
+hframes = 8
+vframes = 3
+frame = 2
+
+[node name="Sprite2D10" type="Sprite2D" parent="Background/E_W" unique_id=1964478998]
+position = Vector2(608, 168)
+texture = ExtResource("2_036b0")
+centered = false
+hframes = 8
+vframes = 3
+frame = 2
+
+[node name="Intersection" type="Sprite2D" parent="Background" unique_id=1284210506]
+position = Vector2(288, 168)
+texture = ExtResource("2_036b0")
+centered = false
+hframes = 8
+vframes = 3
+frame = 16
+
+[node name="N_S" type="Node2D" parent="Background" unique_id=23321772]
+
+[node name="Sprite2D12" type="Sprite2D" parent="Background/N_S" unique_id=2114273770]
+position = Vector2(288, 104)
+texture = ExtResource("2_036b0")
+centered = false
+hframes = 8
+vframes = 3
+frame = 3
+
+[node name="Sprite2D13" type="Sprite2D" parent="Background/N_S" unique_id=648008114]
+position = Vector2(288, 40)
+texture = ExtResource("2_036b0")
+centered = false
+hframes = 8
+vframes = 3
+frame = 3
+
+[node name="Sprite2D14" type="Sprite2D" parent="Background/N_S" unique_id=743325793]
+position = Vector2(288, 296)
+texture = ExtResource("2_036b0")
+centered = false
+hframes = 8
+vframes = 3
+frame = 3
+
+[node name="Sprite2D15" type="Sprite2D" parent="Background/N_S" unique_id=1499101030]
+position = Vector2(288, 232)
+texture = ExtResource("2_036b0")
+centered = false
+hframes = 8
+vframes = 3
+frame = 3
+
+[node name="Sprite2D16" type="Sprite2D" parent="Background/N_S" unique_id=1920359410]
+position = Vector2(288, -24)
+texture = ExtResource("2_036b0")
+centered = false
+hframes = 8
+vframes = 3
+frame = 3
 
 [node name="Traffic Light E_W" type="Node2D" parent="." unique_id=1901112112]
-position = Vector2(320, 184)
+position = Vector2(320, 200)
 script = ExtResource("3_tlwt5")
 
-[node name="Sprite2D" type="Sprite2D" parent="Traffic Light E_W" unique_id=863510790]
-modulate = Color(0, 0.53333336, 0.2, 0.48235294)
-texture = ExtResource("1_fj7yv")
+[node name="W" type="Sprite2D" parent="Traffic Light E_W" unique_id=863510790]
+unique_name_in_owner = true
+position = Vector2(-54, 21)
+texture = ExtResource("6_dwbse")
+
+[node name="E" type="Sprite2D" parent="Traffic Light E_W" unique_id=2046404026]
+unique_name_in_owner = true
+position = Vector2(54, -21)
+texture = ExtResource("6_dwbse")
+
+[node name="N" type="Sprite2D" parent="Traffic Light E_W" unique_id=1644304159]
+unique_name_in_owner = true
+position = Vector2(-21, -54)
+texture = ExtResource("6_dwbse")
+
+[node name="S" type="Sprite2D" parent="Traffic Light E_W" unique_id=930917997]
+unique_name_in_owner = true
+position = Vector2(21, 54)
+texture = ExtResource("6_dwbse")
 
 [node name="Area2D" type="Area2D" parent="Traffic Light E_W" unique_id=1609243866]
 unique_name_in_owner = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Traffic Light E_W/Area2D" unique_id=180811527]
 shape = SubResource("RectangleShape2D_y0r1h")
+
+[node name="Cars" type="Node2D" parent="." unique_id=1704024961]
+
+[node name="Car" type="CharacterBody2D" parent="Cars" unique_id=1646803844]
+position = Vector2(16, 205)
+script = ExtResource("2_tlwt5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cars/Car" unique_id=1996994173]
+shape = SubResource("RectangleShape2D_7oc0d")
+
+[node name="Sprite2D" type="Sprite2D" parent="Cars/Car" unique_id=1215567777]
+rotation = 1.5707964
+scale = Vector2(0.26, 0.26)
+texture = ExtResource("4_dwbse")
+hframes = 4
+vframes = 4
+frame = 6
+
+[node name="Car2" type="CharacterBody2D" parent="Cars" unique_id=1846927815]
+position = Vector2(597, 195)
+script = ExtResource("2_tlwt5")
+travel_direction = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cars/Car2" unique_id=993382366]
+shape = SubResource("RectangleShape2D_7oc0d")
+
+[node name="Sprite2D" type="Sprite2D" parent="Cars/Car2" unique_id=1430394809]
+rotation = 1.5707964
+scale = Vector2(0.26, 0.26)
+texture = ExtResource("4_dwbse")
+hframes = 4
+vframes = 4
+frame = 6
+
+[node name="Car3" type="CharacterBody2D" parent="Cars" unique_id=1308787810]
+position = Vector2(316, -34)
+script = ExtResource("2_tlwt5")
+travel_direction = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cars/Car3" unique_id=307527566]
+shape = SubResource("RectangleShape2D_7oc0d")
+
+[node name="Sprite2D" type="Sprite2D" parent="Cars/Car3" unique_id=284200374]
+rotation = 1.5707964
+scale = Vector2(0.26, 0.26)
+texture = ExtResource("4_dwbse")
+hframes = 4
+vframes = 4
+frame = 6
+
+[node name="Car4" type="CharacterBody2D" parent="Cars" unique_id=1177486398]
+position = Vector2(325, 352)
+script = ExtResource("2_tlwt5")
+travel_direction = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cars/Car4" unique_id=300982463]
+shape = SubResource("RectangleShape2D_7oc0d")
+
+[node name="Sprite2D" type="Sprite2D" parent="Cars/Car4" unique_id=928010109]
+rotation = 1.5707964
+scale = Vector2(0.26, 0.26)
+texture = ExtResource("4_dwbse")
+hframes = 4
+vframes = 4
+frame = 6
+
+[node name="Car5" type="CharacterBody2D" parent="Cars" unique_id=1489391996]
+position = Vector2(56, 205)
+script = ExtResource("2_tlwt5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cars/Car5" unique_id=2123656745]
+shape = SubResource("RectangleShape2D_7oc0d")
+
+[node name="Sprite2D" type="Sprite2D" parent="Cars/Car5" unique_id=1803289619]
+rotation = 1.5707964
+scale = Vector2(0.26, 0.26)
+texture = ExtResource("4_dwbse")
+hframes = 4
+vframes = 4
+frame = 6

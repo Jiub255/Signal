@@ -1,0 +1,44 @@
+{
+  "name": "Main",
+  "next_id": 4,
+  "tags": [],
+  "epics": [],
+  "tasks": [
+    {
+      "id": "task_1",
+      "title": "Make cars avoid other cars",
+      "description": "Make cars slow down to match the car in front of them's speed.\nAlso have a minimum distance to car ahead so no tailgating.",
+      "status": "todo",
+      "priority": "medium",
+      "epic_id": null,
+      "due_date": null,
+      "tags": [],
+      "created_at": 1792217974,
+      "updated_at": 1792217974
+    },
+    {
+      "id": "task_2",
+      "title": "Make cars pull up to stop line",
+      "description": "Make cars go slower in the traffic light region if the light is yellow or red, then fully stop at the line.\nOther cars should stop behind them.",
+      "status": "todo",
+      "priority": "medium",
+      "epic_id": null,
+      "due_date": null,
+      "tags": [],
+      "created_at": 1792218035,
+      "updated_at": 1792218046
+    },
+    {
+      "id": "task_3",
+      "title": "Have lights signal cars to go on green",
+      "description": "Have the traffic light send out a signal to all cars when a light turns green.\nSignal carries info about which lights are green or which lights just turned green.\nThe car can figure out if it should go or not based on the signal.",
+      "status": "todo",
+      "priority": "medium",
+      "epic_id": null,
+      "due_date": null,
+      "tags": [],
+      "created_at": 1792218119,
+      "updated_at": 1792218119
+    }
+  ]
+}

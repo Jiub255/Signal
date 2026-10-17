@@ -1,0 +1,10 @@
+{
+  "current": "main_33ba",
+  "boards": [
+    {
+      "id": "main_33ba",
+      "name": "Main",
+      "path": "res://godoban_boards/main_33ba.json"
+    }
+  ]
+}

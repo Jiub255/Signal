@@ -19,12 +19,17 @@ config/icon="res://icon.svg"
 
 window/size/viewport_width=640
 window/size/viewport_height=360
+window/size/mode=2
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 
 [dotnet]
 
 project/assembly_name="Signal"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/godoban/plugin.cfg")
 
 [physics]
 
