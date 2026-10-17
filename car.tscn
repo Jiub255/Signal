@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://qt8d5fj2rinm"]
+
+[ext_resource type="Script" uid="uid://bj10is4fuv3ro" path="res://car.gd" id="1_uoj53"]
+[ext_resource type="Texture2D" uid="uid://bo2cklawndfm8" path="res://assets/art/only_cars.png" id="2_k61xc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7oc0d"]
+size = Vector2(20, 8)
+
+[node name="Car" type="CharacterBody2D" unique_id=1840648884]
+script = ExtResource("1_uoj53")
+slow_follow_range = 100.0
+follow_distance_limit = 25.0
+follow_speed_multiplier = 1.1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1716770520]
+shape = SubResource("RectangleShape2D_7oc0d")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=668940989]
+rotation = 1.5707964
+scale = Vector2(0.26, 0.26)
+texture = ExtResource("2_k61xc")
+hframes = 4
+vframes = 4
+frame = 6
+
+[node name="RayCast2D" type="RayCast2D" parent="." unique_id=680210196]

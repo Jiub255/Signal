@@ -2,16 +2,12 @@
 
 [ext_resource type="Texture2D" uid="uid://uuwv03ab6e56" path="res://assets/art/blank_640x360.png" id="1_dwbse"]
 [ext_resource type="Texture2D" uid="uid://damlxm1rb4htm" path="res://assets/art/roads2W.png" id="2_036b0"]
-[ext_resource type="Script" uid="uid://bj10is4fuv3ro" path="res://car.gd" id="2_tlwt5"]
 [ext_resource type="Script" uid="uid://db5xcrwr11i7g" path="res://traffic_light.gd" id="3_tlwt5"]
-[ext_resource type="Texture2D" uid="uid://bo2cklawndfm8" path="res://assets/art/only_cars.png" id="4_dwbse"]
+[ext_resource type="PackedScene" uid="uid://qt8d5fj2rinm" path="res://car.tscn" id="5_pkg7o"]
 [ext_resource type="Texture2D" uid="uid://dp8c2ml1pyy4n" path="res://assets/art/circle_21x21.png" id="6_dwbse"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y0r1h"]
 size = Vector2(200, 200)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_7oc0d"]
-size = Vector2(20, 8)
 
 [node name="World" type="Node2D" unique_id=568340604]
 
@@ -184,80 +180,23 @@ shape = SubResource("RectangleShape2D_y0r1h")
 
 [node name="Cars" type="Node2D" parent="." unique_id=1704024961]
 
-[node name="Car" type="CharacterBody2D" parent="Cars" unique_id=1646803844]
+[node name="Car" parent="Cars" unique_id=1840648884 instance=ExtResource("5_pkg7o")]
 position = Vector2(16, 205)
-script = ExtResource("2_tlwt5")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Cars/Car" unique_id=1996994173]
-shape = SubResource("RectangleShape2D_7oc0d")
-
-[node name="Sprite2D" type="Sprite2D" parent="Cars/Car" unique_id=1215567777]
-rotation = 1.5707964
-scale = Vector2(0.26, 0.26)
-texture = ExtResource("4_dwbse")
-hframes = 4
-vframes = 4
-frame = 6
-
-[node name="Car2" type="CharacterBody2D" parent="Cars" unique_id=1846927815]
-position = Vector2(597, 195)
-script = ExtResource("2_tlwt5")
+[node name="Car2" parent="Cars" unique_id=594653011 instance=ExtResource("5_pkg7o")]
+position = Vector2(613, 195)
 travel_direction = 2
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Cars/Car2" unique_id=993382366]
-shape = SubResource("RectangleShape2D_7oc0d")
-
-[node name="Sprite2D" type="Sprite2D" parent="Cars/Car2" unique_id=1430394809]
-rotation = 1.5707964
-scale = Vector2(0.26, 0.26)
-texture = ExtResource("4_dwbse")
-hframes = 4
-vframes = 4
-frame = 6
-
-[node name="Car3" type="CharacterBody2D" parent="Cars" unique_id=1308787810]
-position = Vector2(316, -34)
-script = ExtResource("2_tlwt5")
+[node name="Car3" parent="Cars" unique_id=1160155562 instance=ExtResource("5_pkg7o")]
+position = Vector2(315, -2)
 travel_direction = 1
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Cars/Car3" unique_id=307527566]
-shape = SubResource("RectangleShape2D_7oc0d")
+[node name="Car4" parent="Cars" unique_id=66570997 instance=ExtResource("5_pkg7o")]
+position = Vector2(-43, 205)
 
-[node name="Sprite2D" type="Sprite2D" parent="Cars/Car3" unique_id=284200374]
-rotation = 1.5707964
-scale = Vector2(0.26, 0.26)
-texture = ExtResource("4_dwbse")
-hframes = 4
-vframes = 4
-frame = 6
+[node name="Car5" parent="Cars" unique_id=538881643 instance=ExtResource("5_pkg7o")]
+position = Vector2(49, 204)
 
-[node name="Car4" type="CharacterBody2D" parent="Cars" unique_id=1177486398]
-position = Vector2(325, 352)
-script = ExtResource("2_tlwt5")
+[node name="Car6" parent="Cars" unique_id=1046846638 instance=ExtResource("5_pkg7o")]
+position = Vector2(325, 314)
 travel_direction = 0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Cars/Car4" unique_id=300982463]
-shape = SubResource("RectangleShape2D_7oc0d")
-
-[node name="Sprite2D" type="Sprite2D" parent="Cars/Car4" unique_id=928010109]
-rotation = 1.5707964
-scale = Vector2(0.26, 0.26)
-texture = ExtResource("4_dwbse")
-hframes = 4
-vframes = 4
-frame = 6
-
-[node name="Car5" type="CharacterBody2D" parent="Cars" unique_id=1489391996]
-position = Vector2(56, 205)
-script = ExtResource("2_tlwt5")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Cars/Car5" unique_id=2123656745]
-shape = SubResource("RectangleShape2D_7oc0d")
-
-[node name="Sprite2D" type="Sprite2D" parent="Cars/Car5" unique_id=1803289619]
-rotation = 1.5707964
-scale = Vector2(0.26, 0.26)
-texture = ExtResource("4_dwbse")
-hframes = 4
-vframes = 4
-frame = 6
